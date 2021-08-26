@@ -8,6 +8,8 @@ int	ft_is_sort(int *tab, int length, int (*f)(int, int))
 	i = 0;
 	count_1 = 0;
 	count_2 = 0;
+	if (!length || length == 1)
+		return (1);
 	while (i < length - 1)
 	{
 		if (f(tab[i], tab[i + 1]) >= 0)
@@ -34,8 +36,8 @@ int	ft_is_sort(int *tab, int length, int (*f)(int, int))
 
 int	main(void)
 {
-	int	tab[5] = {4,3,2,1,0};
+	int	tab[5] = {3,2,1};
 	
-	printf("%d", ft_is_sort(tab, 6, &func));
+	printf("%d\n", ft_is_sort(tab, 3, &func));
 	return (0);
 }*/
